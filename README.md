@@ -397,19 +397,6 @@ The sky130_vsdinv should also reflect in your netlist after routing:
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/route_result.png)
 
 
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/img3.jpeg)
-
-## Running the synthesis, floorplan, placement commands
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/img1.jpeg)
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/img2.jpeg)
-
-## Setup and Hold Slack after synthesis
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/img4.jpeg)
-
-## Floorplan Reports - Die Area
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/img5.jpeg)
-
-
 # Contibutors
 * Mayank Kabra, Student, IIIT Bangalore
 * Asmita Zjigyasu, Student, IIIT Bangalore
