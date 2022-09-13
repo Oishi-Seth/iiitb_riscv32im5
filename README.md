@@ -294,6 +294,7 @@ The iiitb_riscv32im5.v file should contain the verilog RTL code you have used an
 Copy "sky130_fd_sc_hd__fast.lib", "sky130_fd_sc_hd__slow.lib", "sky130_fd_sc_hd__typical.lib" and "sky130_vsdinv.lef" files to src folder in your design.
 Final src folder should look like this:
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/src.png)
+## Config.json file
 The contents of the config.json are as follows:
 ```
 {
@@ -362,9 +363,39 @@ add_lefs -src $lefs
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/area1.png)
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/area2.png)
 
-# Placement and Routing
+# Floorplan
+```
+% run_floorplan
+```
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/floorplan.png)
+## Floorplan Report
+Die Area:
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/die.png)
+Core Area:
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/core.png)
 
-## Config.json file
+# Placement
+```
+% run_placement
+```
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/placement.png)
+The sky130_vsdinv should also reflect in your netlist after placement:
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/result_floorplan.png)
+
+# Clock Tree Synthesis
+```
+% run_cts
+```
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/cts.png)
+
+# Routing
+```
+% run_routing
+```
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/routing.png)
+The sky130_vsdinv should also reflect in your netlist after routing:
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/route_result.png)
+
 
 ![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/img3.jpeg)
 
