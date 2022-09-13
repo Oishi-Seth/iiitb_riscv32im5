@@ -216,7 +216,7 @@ $ cd vsdstdcelldesign
 $  cp ./libs/sky130A.tech sky130A.tech
 $ magic -T sky130A.tech sky130_inv.mag &
 ```
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/inverter.jpeg)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/inverter.png)
 
 
 To extract Spice netlist, Type the following commands in tcl window.
@@ -227,21 +227,21 @@ To extract Spice netlist, Type the following commands in tcl window.
 % ext2spice
 ```
 "cthresh 0 rthresh 0" is used to extract parasitic capacitances from the cell.
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/cthresh_rthresh.jpeg)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/cthresh_rthresh.png)
 
 
 Open the terminal in the directory where ngspice is stored and type the following command to open the ngspice console:
 ```
 $ ngspice sky130_inv.spice 
 ```
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/ngspice.jpeg)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/ngspice.png)
 
 
 Now plot the graphs for the designed inverter model using the following command:
 ```
 plot y vs time a
 ```
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/ngspice_waveform.jpeg)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/ngspice_wave.png)
 
 
 ## Rise time and Fall time
@@ -265,6 +265,15 @@ Cell rise delay = (2.150 - 2.076) = 74ps
 ```
 Cell fall delay = (4.0 - 3.983) = 17ps
 ```
+Now open the sky130_vsdinv.mag using the magic command in terminal
+```
+$ magic -T sky130A.tech sky130_vsdinv.mag
+```
+In the tcl command type the following command to generate sky130_vsdinv.lef:
+```
+% lef write
+```
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/lef.png)
 
 
 # Layout using OpenLane
@@ -283,7 +292,9 @@ $ touch iiitb_riscv32im5.v
 The iiitb_riscv32im5.v file should contain the verilog RTL code you have used and got the post synthesis simulation for.
 
 Copy "sky130_fd_sc_hd__fast.lib", "sky130_fd_sc_hd__slow.lib", "sky130_fd_sc_hd__typical.lib" and "sky130_vsdinv.lef" files to src folder in your design.
-
+Final src folder should look like this:
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/src.png)
+The contents of the config.json are as follows:
 ```
 {
     "DESIGN_NAME": "iiitb_riscv32im5",
@@ -315,14 +326,14 @@ Navigate to the openlane folder in terminal and give the following command :
 ```
 $ make mount (or use sudo as prefix)
 ```
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/layout1.jpeg)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/makemount.png)
 
 
 After entering the openlane container give the following command:
 ```
 $ ./flow.tcl -interactive
 ```
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/layout2.jpeg)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/tcl.png)
 
 
 This command will take you into the tcl console. In the tcl console type the following commands:
@@ -330,7 +341,7 @@ This command will take you into the tcl console. In the tcl console type the fol
 % package require openlane 0.9
 % prep -design iiitb_riscv32im5
 ```
-![Image](https://github.com/Asmita-Zjigyasu/iiitb_riscv32im5/blob/main/Images/layout3.jpeg)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/prep.png)
 
 
 The following commands are to merge external the lef files to the merged.nom.lef. In our case sky130_vsdiat is getting merged to the lef file
@@ -339,6 +350,17 @@ The following commands are to merge external the lef files to the merged.nom.lef
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 ```
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/setlef.png)
+
+#Synthesis
+```
+% run_synthesis
+```
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/synthesis.png)
+
+## Synthesis Report
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/area1.png)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/area2.png)
 
 # Placement and Routing
 
