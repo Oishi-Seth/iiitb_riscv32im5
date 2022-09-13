@@ -284,6 +284,33 @@ The iiitb_riscv32im5.v file should contain the verilog RTL code you have used an
 
 Copy "sky130_fd_sc_hd__fast.lib", "sky130_fd_sc_hd__slow.lib", "sky130_fd_sc_hd__typical.lib" and "sky130_vsdinv.lef" files to src folder in your design.
 
+```
+{
+    "DESIGN_NAME": "iiitb_riscv32im5",
+    "VERILOG_FILES": "dir::src/iiitb_riscv32im5.v",
+    "CLOCK_PORT": "clkin",
+    "CLOCK_NET": "clkin",
+    "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
+    "CLOCK_PERIOD": 10,
+    "PL_TARGET_DENSITY": 0.4,
+    "FP_SIZING" : "relative",
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 30,
+        "scl::sky130_fd_sc_hd": {
+            "FP_CORE_UTIL": 20
+        }
+    },
+    
+    "LIB_SYNTH": "dir::src/sky130_fd_sc_hd__typical.lib",
+    "LIB_FASTEST": "dir::src/sky130_fd_sc_hd__fast.lib",
+    "LIB_SLOWEST": "dir::src/sky130_fd_sc_hd__slow.lib",
+    "LIB_TYPICAL": "dir::src/sky130_fd_sc_hd__typical.lib",  
+    "TEST_EXTERNAL_GLOB": "dir::../iiitb_riscv32im5/src/*"
+
+
+}
+```
+
 Navigate to the openlane folder in terminal and give the following command :
 ```
 $ make mount (or use sudo as prefix)
