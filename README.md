@@ -408,7 +408,8 @@ The sky130_vsdinv should also reflect in your netlist after routing:
 #### Area = 1663320 um2
 
 ## 3. Performance
-![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/Performance.png)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/performance.png)
+#### Performance = 1/(clock period - slack) = 1/(10 - 5.64)ns = 229.358 Mhz
 
 ## 4. Flip-flop to standard cell ratio
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/number_of_gate.png)
