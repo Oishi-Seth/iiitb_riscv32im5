@@ -418,11 +418,11 @@ The sky130_vsdinv should also reflect in your netlist after routing:
 #### Ratio = 0.102
 
 ## 5. Power (internal, switching, leakage and total)
-![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/power_report.png)
-#### Internal Power = 1.97 mW (61%)
-#### Switching Power = 1.26 mW (39%)
-#### Leakage Power = 13.3 uW (0%)
-#### Total Power = 3.24 mW (100%)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/power.png)
+#### Internal Power = 20.00 mW (61%)
+#### Switching Power = 7.05 mW (39%)
+#### Leakage Power = 13.1 uW (0%)
+#### Total Power = 33.00 mW (100%)
 
 # Contibutors
 * Mayank Kabra, Student, IIIT Bangalore
