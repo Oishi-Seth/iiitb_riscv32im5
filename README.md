@@ -398,6 +398,30 @@ The sky130_vsdinv should also reflect in your netlist after placement:
 The sky130_vsdinv should also reflect in your netlist after routing:
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/route_result.png)
 
+# Results post-layout
+## 1. Post layout synthesis gate count
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/number_of_gate.png)
+#### Gate count = 28907 (line 13)
+
+## 2. Area (Box command)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/box_command.png)
+#### Area = 1663320 um2
+
+## 3. Performance
+
+## 4. Flip-flop to standard cell ratio
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/number_of_gate.png)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/flip_flop.png)
+#### Number of flip-flop = 2958 (line 57)
+#### Number of standard cell = 28907 (line 13)
+#### Ratio = 0.102
+
+## 5. Power (internal, switching, leakage and total)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/power_report.png)
+#### Internal Power = 1.97 mW (61%)
+#### Switching Power = 1.26 mW (39%)
+#### Leakage Power = 13.3 uW (0%)
+#### Total Power = 3.24 mW (100%)
 
 # Contibutors
 * Mayank Kabra, Student, IIIT Bangalore
