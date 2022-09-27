@@ -371,9 +371,9 @@ add_lefs -src $lefs
 ```
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/floorplan.png)
 ## Floorplan Report
-###Die Area:
+#### Die Area:
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/die.png)
-###Core Area:
+#### Core Area:
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/core.png)
 
 # Placement
