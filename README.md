@@ -362,6 +362,8 @@ add_lefs -src $lefs
 ## Synthesis Report
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/area1.png)
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/area2.png)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/area3.png)
+![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/area4.png)
 
 # Floorplan
 ```
@@ -369,9 +371,9 @@ add_lefs -src $lefs
 ```
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/floorplan.png)
 ## Floorplan Report
-Die Area:
+####Die Area:
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/die.png)
-Core Area:
+####Core Area:
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/core.png)
 
 # Placement
