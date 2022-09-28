@@ -422,7 +422,7 @@ OpenSTA> report_checks
 I was not able to run the report_checks command on my machine as it was getting hanged again and again. So, I had to use the college PC to run OPENSTA flow on the design's RUN.
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/report_check1.png)
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/report_check2.png)
-#### Performance = 1/(clock period - slack) = 1/(30 - 10.86)ns = 522.46 Mhz
+#### Performance = 1/(clock period - slack) = 1/(30 - 10.86)ns = 52.24 Mhz
 
 ## 4. Flip-flop to standard cell ratio
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/number_of_gate.png)
