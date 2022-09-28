@@ -408,6 +408,18 @@ The sky130_vsdinv should also reflect in your netlist after routing:
 #### Area = 1663320 um2
 
 ## 3. Performance
+```
+$ sta
+OpenSTA> read_liberty -max /home/oishi/Desktop/ASIC/OpenLane/designs/iiitb_riscv32im5/src/sky130_fd_sc_hd__fast.lib
+OpenSTA> read_liberty -min /home/oishi/Desktop/ASIC/OpenLane/designs/iiitb_riscv32im5/src/sky130_fd_sc_hd__slow.lib
+OpenSTA> read_verilog /home/oishi/Desktop/ASIC/OpenLane/designs/iiitb_riscv32im5/runs/RUN_2022.09.27_17.48.50/results/routing/top.resized.v
+OpenSTA> link_design top
+OpenSTA> read_sdc /home/oishi/Desktop/ASIC/OpenLane/designs/iiitb_riscv32im5/runs/RUN_2022.09.27_17.48.50/results/cts/top.sdc
+OpenSTA> read_spef /home/oishi/Desktop/ASIC/OpenLane/designs/iiitb_riscv32im5/runs/RUN_2022.09.27_17.48.50/results/routing/top.nom.spef
+OpenSTA> set_propagated_clock [all_clocks] 
+OpenSTA> report_checks 
+```
+I was not able to run the report_checks command on my machine as it was getting hanged again and again. So, I had to use the college PC to run OPENSTA flow on the design's RUN.
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/report_check1.png)
 ![Image](https://github.com/Oishi-Seth/iiitb_riscv32im5/blob/master/images/report_check2.png)
 #### Performance = 1/(clock period - slack) = 1/(30 - 10.86)ns = 522.46 Mhz
